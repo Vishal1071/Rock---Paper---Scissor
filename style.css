@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+    color: hsl(0, 0%, 20%);
+}
+.choices{
+    margin-bottom: 30px;
+}
+.choices button{
+    font-size: 5rem;
+    min-width: 120px;
+    margin: 0 10px;
+    border-radius: 350px;
+    background-color:hsl(0, 0%, 0%);
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+.choices button:hover{
+    background-color:hsl(117, 96%, 29%);
+}
+#playerDisplay{
+    font-size: 2rem;
+    margin-right: 150px;
+}
+#computerDisplay{
+    font-size: 2rem;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+#resultDisplay{
+    font-size: 3rem;
+    margin: 35px 0;
+}
+.scoreDisplay{
+    font-size: 1.3rem;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+.greenText, #playerScoreDidplay{
+    color: green;
+}
+.redText, #computerScoreDisplay{
+    color: red;
+}
+
+
+/* --- Responsive Adjustments for Screens up to 600px Wide --- */
+@media screen and (max-width: 600px) {
+    /* Reduce the size of the main heading */
+    h1 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    /* Adjust button size and spacing for better fit */
+    .choices button {
+        font-size: 3rem; /* Smaller emojis */
+        min-width: 80px; /* Narrower buttons */
+        margin: 0 5px; /* Less space between buttons */
+    }
+
+    /* Center-align the displays and scores instead of using large margins */
+    #playerDisplay,
+    #computerDisplay,
+    .scoreDisplay {
+        font-size: 1.5rem; /* Slightly smaller display text */
+        margin-right: 0; /* Remove the large right margin */
+        text-align: center; /* Center the text */
+        width: 90%; /* Give it a set width to help with centering */
+    }
+    
+    /* Ensure the result display is still prominent */
+    #resultDisplay {
+        font-size: 2.5rem;
+        margin: 20px 0; /* Less vertical margin */
+        text-align: center;
+    }
+
+    /* Fix the redundant "player Score" labels in the HTML by giving the second one a margin-top */
+    .scoreDisplay:last-child {
+        margin-top: 10px; 
+    }
+}
